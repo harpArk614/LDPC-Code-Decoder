@@ -102,10 +102,12 @@ def decode(H, codeword, snr, file="inp.txt"):
     count=0
     decoded_frames=np.zeros((codeword.shape[0],codeword.shape[1]),dtype=int)
     for l in out:
-
-        decoded_frames[:,count]=np.array(list(l.strip()),dtype=int)
+        curr_frame = np.array(list(l.strip()),dtype=int)
+        temp = np.empty(shape=(L,K*K))
+        for i in range(L):
+            temp[i] = curr_frame[i*K*K: (i+1)*K*K].reshape(K,K).swapaxes(0,1).flatten()
+        decoded_frames[:,count] = temp.flatten('F')
         count+=1
-
-    out.close();
+    out.close()
     return decoded_frames
 

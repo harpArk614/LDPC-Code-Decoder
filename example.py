@@ -186,6 +186,7 @@ plt.show()
 
 ##################################################################
 # With RGB images, we proceed similarly
+"""
 print("\n\n")
 tiger = np.asarray(Image.open("data/tiger.jpg"))
 # Convert it to a binary matrix
@@ -222,3 +223,4 @@ for ax_row, titles, img_list, cmap in zip(axes, [titles_eye, titles_tiger],
         ax.set_yticks([])
 plt.tight_layout()
 plt.show()
+"""

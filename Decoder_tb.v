@@ -131,34 +131,40 @@ module Decoder_tb ();
 
         if(count%K==(K-1) && (count/K)<L) begin
           //for(int x=0; x<K; x=x+1) begin
-
+            int t=0;
             for(int y=0; y<K; y=y+1) begin
-              hard_dec[(L*K*y)+(L*0)+((count)/K) ]=dec_out_fin[0][y];
+              hard_dec[t]=dec_out_fin[0][y];
+              t=t+1;
               //$display("%b",dec_out_fin[0][y]);
             end
 
             for(int y=0; y<K; y=y+1) begin
-              hard_dec[(L*K*y)+(L*1)+((count)/K) ]=dec_out_fin[1][y];
+              hard_dec[t]=dec_out_fin[1][y];
+              t=t+1;
               //$display("%b",dec_out_fin[1][y]);
             end
 
             for(int y=0; y<K; y=y+1) begin
-              hard_dec[(L*K*y)+(L*2)+((count)/K) ]=dec_out_fin[2][y];
+              hard_dec[t]=dec_out_fin[2][y];
+              t=t+1;  
               //$display("%b",dec_out_fin[2][y]);
             end
 
             for(int y=0; y<K; y=y+1) begin
-              hard_dec[(L*K*y)+(L*3)+((count)/K) ]=dec_out_fin[3][y];
+              hard_dec[t]=dec_out_fin[3][y];
+              t=t+1;
               //$display("%b",dec_out_fin[3][y]);
             end
 
             for(int y=0; y<K; y=y+1) begin
-              hard_dec[(L*K*y)+(L*4)+((count)/K) ]=dec_out_fin[4][y];
+              hard_dec[t]=dec_out_fin[4][y];
+              t=t+1;
               //$display("%b",dec_out_fin[4][y]);
             end
 
             for(int y=0; y<K; y=y+1) begin
-              hard_dec[(L*K*y)+(L*5)+((count)/K) ]=dec_out_fin[5][y];
+              hard_dec[t]=dec_out_fin[5][y];
+              t=t+1;
               //$display("%b",dec_out_fin[5][y]);
             end
 

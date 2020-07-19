@@ -62,7 +62,9 @@ wire [((K+1)*K)-1:0][MESSAGE_WIDTH-1:0] int_out      ;  // Will be used in row m
 
 wire [((K+1)*K)-1:0][ADDR_WIDTH-1:0]    read_add_out ;  // Will be used in col major order
 wire [((K+1)*K)-1:0][K-1:0]             dec_out      ;  // Will be used in col major order
-
+initial begin
+  //$monitor("%t\t%b\t%b\t%b",$time,PE_out_cnu[0],PE_out_cnu[1],PE_out_cnu[2]);
+end
 generate
   genvar x,y;
 

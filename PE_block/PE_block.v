@@ -16,7 +16,7 @@ module PE_BLOCK
   parameter COUNT_FROM_2=0,
   parameter COUNT_FROM_3=0,
   parameter VNU_DELAY=4,
-  parameter CNU_DELAY=6,
+  parameter CNU_DELAY=7,
   parameter MESSAGE_WIDTH=5,
   parameter DECISION_WIDTH=1
 )
@@ -456,6 +456,10 @@ always @(ag_out[0]) begin
     extended=1'b0;
   end
 end
+
+//always @(ag_out[0]) begin
+  //$display("%b\t%b\t%b\t%b\t",ag_out[0], cnu_data_in[0], cnu_data_in[1], cnu_data_in[2]);
+//end
 
 
 //-----------------------------------------------------------------------------------------
